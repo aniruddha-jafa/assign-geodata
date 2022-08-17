@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react'
+import LocationForm from '../components/LocationForm'
 import Head from 'next/head'
 
 export default function Home() {
@@ -13,8 +13,7 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <main>
-                <p>main</p>
-                <Button colorScheme={'blue'}>Hello</Button>
+                <LocationForm />
             </main>
         </div>
     )
