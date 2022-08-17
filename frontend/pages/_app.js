@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import ErrorBoundary from '../components/ErrorBoundary'
-import 'purecss/build/pure-min.css'
+import { ChakraProvider } from '@chakra-ui/react'
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -13,9 +13,11 @@ function MyApp({ Component, pageProps }) {
                     content='width=device-width, initial-scale=1.0'
                 />
             </Head>
-            <ErrorBoundary>
-                <Component {...pageProps} />
-            </ErrorBoundary>
+            <ChakraProvider>
+                <ErrorBoundary>
+                    <Component {...pageProps} />
+                </ErrorBoundary>
+            </ChakraProvider>
         </>
     )
 }
